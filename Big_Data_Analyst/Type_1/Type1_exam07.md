@@ -39,7 +39,10 @@ df_1 = df_1[df_1['id_assessment']==12]
 # 표준화
 from sklearn.preprocessing import StandardScaler
 scaler = StandardScaler()
+df_1['score'] = scaler.fit_transform(df_1[['score']])
 df_1['score'] = scaler.fit_transform(df_1[['score']]) 
+round(df_1['score'].max(),3)
+# 답 : 2.183
 ```
 * *스케일링 시 주의사항: fit에 DataFrame이 들어가야 함*
 > ```df_1['score'] = scaler.fit_transform(df_1['score']) ```
@@ -53,7 +56,16 @@ df_1['score'] = scaler.fit_transform(df_1[['score']])
 ### 문제 2. 
 > DE1~DE77 칼럼 중 주가지수의 종가"close"와 가장 상관관계가 높은 변수를 찾아, 해당 변수의 평균값을 구하시오
 > (반올림 넷째자리)
+```python
+# 주의: 절대값으로 확인한다. 
+df_2 = pd.read_csv(file2)
+df_2.corr()['close'].abs().sort_values(ascending =False)
+# DE14    0.0624004109
 
+# DE19의 평균 
+df_2.DE14.mean().round(4)
+# 답 : -0.0004
+```
 
 
 
