@@ -17,8 +17,35 @@ study_period_days     0
 score                21
 dtype: int64
 ```
+* 결측치 제거
+```python
+# 결측치 제거 
+df_1 = df_1.dropna(subset ='score')
+df_1.isnull().sum()
+```
+```
+id_assessment        0
+student_id           0
+study_period_days    0
+score                0
+dtype: int64
+```
+* 학생이 가장 많이 수강한 과목
+```python
+df_1.columns
+df_1['id_assessment'].value_counts().idxmax() # 과목 12
+df_1 = df_1[df_1['id_assessment']==12]
 
-
+# 표준화
+from sklearn.preprocessing import StandardScaler
+scaler = StandardScaler()
+df_1['score'] = scaler.fit_transform(df_1[['score']]) 
+```
+* *스케일링 시 주의사항: fit에 DataFrame이 들어가야 함*
+> ``` ValueError: Expected a 2-dimensional container 
+but got <class 'pandas.core.series.Series'> instead. 
+Pass a DataFrame containing a single row (i.e. single sample) 
+or a single column (i.e. single feature) instead.```
 
 ### 문제 2. 
 > DE1~DE77 칼럼 중 주가지수의 종가"close"와 가장 상관관계가 높은 변수를 찾아, 해당 변수의 평균값을 구하시오
