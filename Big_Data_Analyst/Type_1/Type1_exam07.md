@@ -3,6 +3,13 @@
 > 해당 과목 점수(score)를 표준화(Standard scaling)한 뒤에 표준화된 가장 큰 값을 구하시오
 > (반올림하여 소수 셋째자리까지 계산)
 
+```python
+import pandas as pd 
+df_1 = pd.read_csv(file1)
+
+df_1.info()
+print(df_1.isnull().sum())
+```
 
 
 
