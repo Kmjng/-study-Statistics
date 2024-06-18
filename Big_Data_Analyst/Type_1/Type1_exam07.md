@@ -72,3 +72,18 @@ df_2.DE14.mean().round(4)
 
 ### 문제 3. 
 > IQR을 이용해 CO2 이상치 수를 찾으시오 
+```python
+df_3 = pd.read_csv(file3)
+df_3.info()
+
+df_3['CO2']
+
+Q3 = df_3.CO2.quantile(0.75) # 상위 25% (하위 75%) 
+Q1 = df_3.CO2.quantile(0.25)
+IQR = Q3 - Q1
+
+out = IQR*1.5
+# 이상치의 수 
+df_3[(df_3['CO2']< Q1-out)|(df_3['CO2']> Q3 + out)]
+# 답 : 304 개 
+```
