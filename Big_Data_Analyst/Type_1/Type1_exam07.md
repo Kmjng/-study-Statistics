@@ -8,9 +8,15 @@ import pandas as pd
 df_1 = pd.read_csv(file1)
 
 df_1.info()
-print(df_1.isnull().sum())
+df_1.isnull().sum()
 ```
-
+```
+id_assessment         0
+student_id            0
+study_period_days     0
+score                21
+dtype: int64
+```
 
 
 
