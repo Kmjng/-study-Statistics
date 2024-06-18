@@ -42,10 +42,12 @@ scaler = StandardScaler()
 df_1['score'] = scaler.fit_transform(df_1[['score']]) 
 ```
 * *스케일링 시 주의사항: fit에 DataFrame이 들어가야 함*
-> ``` ValueError: Expected a 2-dimensional container 
-but got <class 'pandas.core.series.Series'> instead. 
-Pass a DataFrame containing a single row (i.e. single sample) 
-or a single column (i.e. single feature) instead.```
+> ```
+> ValueError: Expected a 2-dimensional container 
+> but got <class 'pandas.core.series.Series'> instead. 
+> Pass a DataFrame containing a single row (i.e. single sample) 
+> or a single column (i.e. single feature) instead.
+> ```
 
 ### 문제 2. 
 > DE1~DE77 칼럼 중 주가지수의 종가"close"와 가장 상관관계가 높은 변수를 찾아, 해당 변수의 평균값을 구하시오
