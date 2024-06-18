@@ -42,6 +42,7 @@ scaler = StandardScaler()
 df_1['score'] = scaler.fit_transform(df_1[['score']]) 
 ```
 * *스케일링 시 주의사항: fit에 DataFrame이 들어가야 함*
+> ```df_1['score'] = scaler.fit_transform(df_1['score']) ```
 > ```
 > ValueError: Expected a 2-dimensional container 
 > but got <class 'pandas.core.series.Series'> instead. 
