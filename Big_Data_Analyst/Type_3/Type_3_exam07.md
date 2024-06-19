@@ -83,6 +83,9 @@ odds_ratio # 1.0047172874702013
 > gender를 종속변수로 하고 나머지 변수들(age, length, diameter, height, weight)을 독립변수로 사용하는
 > 로지스틱 회귀 모델을 적합시킨 후, 잔차 이탈도(Residual Deviance)를 계산하시오 
 > (반올림 소수 둘째 자리)
+> > **Tip**
+> > glm(또는 sm.GML) 모델을 사용하면 summary()에서 deviance 파라미터 제공해줌
+> > 아니면, summary()에서 Log-Likelihood에서 (-2)를 곱하여 구할 수 있음
 
 ```python
 import pandas as pd 
@@ -93,12 +96,11 @@ train.columns
 y_train = train.gender
 X_train = train.drop('gender', axis = 1)
 
-import statsmodels.api as sm 
-model = sm.Logit(y_train, X_train) # sm.Logit(y,X)
-lr = model.fit()
+import statsmodels.api  as sm 
+model = sm.GLM(y_train, X_train, family= sm.families.Binomial())
+lr = model.fit() 
 
 lr.summary()
-
 ```
 ```
 <class 'statsmodels.iolib.summary.Summary'>
