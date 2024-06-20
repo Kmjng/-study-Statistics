@@ -96,9 +96,7 @@ X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, random_state
 from sklearn.ensemble import RandomForestClassifier
 
 model = RandomForestClassifier(random_state = 0 )
-
-
-model = LogisticRegression()
+model = LogisticRegression() 
 lr = model.fit(X_train, y_train)
 pred_val = lr.predict(X_val) 
 pred_test = lr.predict(X_test) # 제출해야할 것 !
