@@ -29,6 +29,15 @@ print(f'''A1. 표본 평균:{mean}\n
 A2. 검정통계량: {statistic.round(4)},\n
 A3. p-value:{p_val.round(4)}''')
 ```
+```
+A1. 표본 평균:-6.12
+
+A2. 검정통계량: -3.0002,
+
+A3. p-value:0.0016
+```
+
+
 
 > 출처 : https://www.kaggle.com/datasets/agileteam/bigdatacertificationkr (빅데이터 분석기사 실기 준비를 위한 캐글 놀이터)
 
