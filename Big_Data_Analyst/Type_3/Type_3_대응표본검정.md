@@ -12,7 +12,7 @@
 1-4. 가설검정의 결과는? (유의수준 5%)    
 
 ### Tip   
-* 대응표본 t검정 -> 전/후 비교  
+* 전/후 비교 -> 대응표본 t검정   
 * t-test relative  
 * stats.ttest_rel(<mark>df['Post'], df['Prev']</mark>, alternaive = 'less')  
 ```python
