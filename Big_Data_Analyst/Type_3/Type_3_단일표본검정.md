@@ -25,3 +25,8 @@ print(p_val)
 # >> 표본의 평균이 75보다 크다.
 
 ```
+
+
+
+> 출처 : https://www.kaggle.com/datasets/agileteam/bigdatacertificationkr (빅데이터 분석기사 실기 준비를 위한 캐글 놀이터)
+
