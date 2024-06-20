@@ -8,6 +8,20 @@
 * 표본의 크기가 충분히 크다.
 검정통계량, p-value, 검정결과를 출력하시오
 
-### 풀이 방법 
-> 하나의 집단에 대해 검정 -> 단일표본 t검정
-> 
+### Tip
+* 하나의 집단에 대해 검정 -> 단일표본 t검정
+* t-test 1 sample
+* stats.ttest_1samp(<mark>표본</mark>, (<mark>검정할 모평균</mark>, alternative = {'greater'|'less'|'two-sided'})
+
+ ```python
+# 데이터
+scores = [75, 80, 68, 72, 77, 82, 81, 79, 70, 74, 76, 78, 81, 73, 81, 78, 75, 72, 74, 79, 78, 79]
+
+from scipy import stats 
+statistic, p_val = stats.ttest_1samp(scores, 75, alternative ='greater')
+print(p_val)
+# 0.04597614747709146
+# >> 유의수준 0.05 하에, 귀무가설 기각
+# >> 표본의 평균이 75보다 크다.
+
+```
