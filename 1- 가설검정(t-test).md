@@ -1,4 +1,4 @@
-> d
+> 단일표본 t검정(ttest_1samp)/대응표본 t검정(ttest_rel)/독립표본 t검정(ttest_ind)
 
 단일표본검정 
 ===
