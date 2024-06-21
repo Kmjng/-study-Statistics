@@ -22,10 +22,11 @@ from scipy import stats
 
 ☑️정규성을 만족하지 않으면 ?  
 ---
-* 단일표본 t-test 대신 <U>비모수 검정</U>을 실시한다.    
+* 단일표본 t-test 대신 <U>비모수 검정</U>을 실시한다.
+* 정규성을 만족하지 않기 때문에, '평균'이 아닌 <mark>'중앙값'</mark>을 검정한다. 
 📈<span style="color:green">**Wilcoxon 부호순위 검정** </span>
 ```python from scipy import stasts 
-  statistic, p_val = stasts.wilcoxon(df[col], alternative = 'less') 
+  statistic, p_val = stasts.wilcoxon(df[col]-중앙값, alternative = 'less') 
   # alternative : 대립가설 입장으로 작성
   # => less, greater, two-sided (단측/양측) ; default : two-sided
 ```
