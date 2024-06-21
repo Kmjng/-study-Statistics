@@ -29,7 +29,7 @@ WilcoxonResult(statistic=684.0, pvalue=0.029661945180945556)
 UserWarning: Exact p-value calculation does not work if there are zeros. Switching to normal approximation.
   warnings.warn("Exact p-value calculation does not work if there are "
 ```
-###⚠️ 경고 메세지 원인 
+### ⚠️경고 메세지 원인 
 * 데이터가 정규성을 띄고 있으면 df['weight']-Median 이 0 인 데이터가 다수 존재할 수 있다.
 
 ```python
