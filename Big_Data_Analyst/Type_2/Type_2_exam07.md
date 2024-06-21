@@ -49,7 +49,8 @@ train.isnull().sum() # 결측치 확인
 test.isnull().sum()
 ```
 3-2. *만약 결측치가 있다면?*  
-* ```from sklearn.impute import SimpleImputer``` 
+* ```from sklearn.impute import SimpleImputer```
+*  통계학에서 imputation은 데이터에서 비어 있는 값들에 어떤 값들로 채워 넣는 것을 뜻
 ```python
 # Imputer 활용한 결측치 채우기
 from sklearn.impute import SimpleImputer
