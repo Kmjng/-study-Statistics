@@ -7,7 +7,7 @@
 검정통계량, p-value, 검정결과를 출력하시오   
 
 ### Tip   
-* 평균차이 -> 독립성검정  
+* <mark>평균</mark>차이 -> <mark>독립표본 t검정</mark>
 * t-test independent    
 * stats.ttest_ind(<mark>df['group1'], df['group2']</mark>) # (인수 list, array, series 가능)   
 ```python
