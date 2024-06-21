@@ -96,7 +96,10 @@ train.columns
 y_train = train.gender
 X_train = train.drop('gender', axis = 1)
 
-import statsmodels.api  as sm 
+import statsmodels.api  as sm
+
+# X_train에 절편 상수값 추가
+X_train = sm.add_constant(X_train)
 model = sm.GLM(y_train, X_train, family= sm.families.Binomial())
 lr = model.fit() 
 
