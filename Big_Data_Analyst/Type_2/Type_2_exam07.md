@@ -48,8 +48,17 @@ test.info()
 train.isnull().sum() # 결측치 확인 
 test.isnull().sum()
 ```
-3-2. *만약 결측치가 있다면?*
+3-2. *만약 결측치가 있다면?*  
+* ```from sklearn.impute import SimpleImputer``` 
+```python
+# Imputer 활용한 결측치 채우기
+from sklearn.impute import SimpleImputer
 
+imp = SimpleImputer()
+train = imp.fit_transform(train)
+test = imp.transform(test)
+# imputer는 numpy 형태로 반환함
+```
 
 
 
