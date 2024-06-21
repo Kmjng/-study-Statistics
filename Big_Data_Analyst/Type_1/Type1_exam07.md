@@ -39,7 +39,7 @@ df_1 = df_1[df_1['id_assessment']==12]
 # 표준화
 from sklearn.preprocessing import StandardScaler
 scaler = StandardScaler()
-df_1['score'] = scaler.fit_transform(df_1[['score']])
+df_1['score'] = scaler.fit_transform(df_1[['score']]) # df[['col']] # DataFrame, not Series
 round(df_1['score'].max(),3)
 # 답 : 2.183
 ```
